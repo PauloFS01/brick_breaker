@@ -36,4 +36,12 @@ public class Ball : MonoBehaviour
         }
         myBody.velocity = constantSpeed * myBody.velocity.normalized;
     }
+
+    private void OnCollisionEnter2D(Collision2D target)
+    {
+        if(target.gameObject.tag == "Brick")
+        {
+            Destroy(target.gameObject, 0.01f);
+        }
+    }
 }
