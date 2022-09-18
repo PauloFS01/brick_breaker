@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Brick
+  - Brick2
   layers:
   - Default
   - TransparentFX
@@ -41,10 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
+    locked: 1
   - name: Borders
     uniqueID: 977463501
-    locked: 0
+    locked: 1
   - name: Player
     uniqueID: 137071457
     locked: 0

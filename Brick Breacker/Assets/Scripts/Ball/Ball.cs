@@ -43,5 +43,9 @@ public class Ball : MonoBehaviour
         {
             Destroy(target.gameObject, 0.01f);
         }
+        if (target.gameObject.tag == "Brick2")
+        {
+            target.gameObject.tag = "Brick";
+        }
     }
 }
