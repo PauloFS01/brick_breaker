@@ -17,6 +17,5 @@ public class Brick : MonoBehaviour
     {
         if (this.gameObject.tag == "Brick")
             brickRenderer.sprite = TileYellow;
-            //brickRender.material.SetColor("_Color", Color.red);
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7920555691637729262}
   - component: {fileID: 4009736082180459628}
   - component: {fileID: 6019218825976540841}
+  - component: {fileID: 4114644618913438234}
   m_Layer: 0
   m_Name: Orange_brick
   m_TagString: Brick2
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.383451, y: 2.2694354}
   m_EdgeRadius: 0
+--- !u!114 &4114644618913438234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5284736900665025042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2b4739569981114ba0080f4f7a8d9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TileYellow: {fileID: 21300000, guid: 9c61dba73fb4004408eb55fc70ea826e, type: 3}
+  brickRenderer: {fileID: 0}
