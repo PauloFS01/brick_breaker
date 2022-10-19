@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance;
+
     public Text scoreText, lifeScoreText, highScoreText, pauseText;
     public Button playBtn, pauseBtn;
 
@@ -13,11 +15,17 @@ public class GameController : MonoBehaviour
 
     public GameObject pausePanel;
     //public GameObject[] level;
-    void NextLevelPanel()
+
+    private void Awake()
+    {
+        instance = this;
+    }
+    public void NextLevelPanel()
     {
         Time.timeScale = 0;
         pausePanel.SetActive(true);
         pauseText.text = "Yes Done!";
+        highScoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
 
         pauseBtn.interactable = true;
         playBtn.onClick.RemoveAllListeners();
@@ -68,4 +76,9 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+/*    void ScoreTextFunction()
+    {
+        GameController.instance.scoreText.text = "Score: " + PlayerPrefs.GetInt("Score");
+    }*/
 }

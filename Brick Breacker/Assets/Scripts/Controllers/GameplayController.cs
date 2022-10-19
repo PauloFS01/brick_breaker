@@ -18,9 +18,19 @@ public class GameplayController : MonoBehaviour
     void Update()
     {
         BrickCounter();
+        ScoreTextFunction();
         if(brickCounter == 0)
         {
+            GameController.instance.NextLevelPanel();
             levelCounter++;
+        }
+    }
+    void ScoreTextFunction()
+    {
+        GameController.instance.scoreText.text = "Score: " + PlayerPrefs.GetInt("Score");
+        if(PlayerPrefs.GetInt("Score", 0) > PlayerPrefs.GetInt("HighScore",0))
+        {
+            PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("Score"));
         }
     }
     void BrickCounter()

@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     private Rigidbody2D myBody;
 
     private bool canMove, shoot;
+    private int score;
     void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -41,11 +42,15 @@ public class Ball : MonoBehaviour
     {
         if(target.gameObject.tag == "Brick")
         {
-            Destroy(target.gameObject, 0.01f);
+            Destroy(target.gameObject);
+            score += 100;
+            PlayerPrefs.SetInt("Score", score);
         }
         if (target.gameObject.tag == "Brick2")
         {
             target.gameObject.tag = "Brick";
+            score += 100;
+            PlayerPrefs.SetInt("Score", score);
         }
     }
 }
