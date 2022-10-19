@@ -22,7 +22,8 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if(Time.timeScale == 1)
+            Movement();
         // if paddle is in right side ball will receive right impulse
         // if it is on the left side ball  will receive left impulse
         if (direction < 1)
